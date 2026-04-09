@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocro Labs | FiveM Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles background -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&#9670;</span>
+                <span class="logo-text">MOCRO<span class="accent">LABS</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#scripts">Scripts</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://discord.gg/" target="_blank" class="btn-discord">
+                <i class="fab fa-discord"></i> Discord
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">FiveM Script Development</div>
+            <h1 class="hero-title">
+                <span class="line1">MOCRO</span>
+                <span class="line2">LABS</span>
+            </h1>
+            <p class="hero-subtitle">Nous concevons des scripts FiveM sur mesure, performants et innovants pour transformer votre serveur en une experience unique.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Nos Services
+                </a>
+                <a href="#scripts" class="btn btn-outline">
+                    <i class="fas fa-code"></i> Voir nos Scripts
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="150">0</span>+
+                    <span class="stat-label">Scripts Livres</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>+
+                    <span class="stat-label">Serveurs Clients</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="99">0</span>%
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-title">mocro_labs.lua</span>
+                </div>
+                <pre class="code-body"><code><span class="kw">local</span> MocroLabs = {}
+
+<span class="fn">RegisterNetEvent</span>(<span class="str">'mocro:init'</span>)
+<span class="fn">AddEventHandler</span>(<span class="str">'mocro:init'</span>, <span class="kw">function</span>()
+    <span class="cm">-- Initialisation du framework</span>
+    MocroLabs.version = <span class="str">"2.0"</span>
+    MocroLabs.ready = <span class="kw">true</span>
+    <span class="fn">print</span>(<span class="str">"^2[MocroLabs] Ready!"</span>)
+<span class="kw">end</span>)</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Qui sommes-nous</span>
+                <h2 class="section-title">A propos de <span class="accent">Mocro Labs</span></h2>
+                <p class="section-desc">Une equipe passionnee de developpeurs FiveM, dediee a creer des experiences de jeu exceptionnelles.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Fiabilite</h3>
+                    <p>Des scripts optimises et testes pour garantir la stabilite de votre serveur 24/7.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Performance</h3>
+                    <p>Code optimise pour un impact minimal sur les performances de votre serveur.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Sur Mesure</h3>
+                    <p>Chaque script est adapte a vos besoins specifiques et a l'identite de votre serveur.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Support 24/7</h3>
+                    <p>Une equipe reactive pour vous accompagner a chaque etape de votre projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-dark" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ce que nous faisons</span>
+                <h2 class="section-title">Nos <span class="accent">Services</span></h2>
+                <p class="section-desc">Des solutions completes pour propulser votre serveur FiveM au niveau superieur.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-badge">Populaire</div>
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Developpement de Scripts</h3>
+                    <p>Scripts Lua/JS personnalises : jobs, systemes economiques, HUD, inventaires, et plus encore.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Scripts sur mesure</li>
+                        <li><i class="fas fa-check"></i> Compatible ESX / QBCore / vRP</li>
+                        <li><i class="fas fa-check"></i> Documentation complete</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-server"></i></div>
+                    <h3>Configuration Serveur</h3>
+                    <p>Installation et configuration complete de votre serveur FiveM avec framework au choix.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Setup complet</li>
+                        <li><i class="fas fa-check"></i> Optimisation</li>
+                        <li><i class="fas fa-check"></i> Anti-cheat integre</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Design UI/UX</h3>
+                    <p>Interfaces NUI modernes et reactives pour une experience joueur immersive.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> HUD personnalise</li>
+                        <li><i class="fas fa-check"></i> Menus interactifs</li>
+                        <li><i class="fas fa-check"></i> Design responsive</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Maintenance & Debug</h3>
+                    <p>Correction de bugs, mises a jour et maintenance continue de vos scripts existants.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Debug rapide</li>
+                        <li><i class="fas fa-check"></i> Mises a jour</li>
+                        <li><i class="fas fa-check"></i> Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts Showcase -->
+    <section class="section" id="scripts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre Portfolio</span>
+                <h2 class="section-title">Scripts <span class="accent">Populaires</span></h2>
+                <p class="section-desc">Decouvrez nos scripts les plus demandes par la communaute.</p>
+            </div>
+            <div class="scripts-grid">
+                <div class="script-card">
+                    <div class="script-header">
+                        <span class="script-tag">ESX / QBCore</span>
+                        <span class="script-version">v3.2</span>
+                    </div>
+                    <h3><i class="fas fa-briefcase"></i> Systeme de Jobs</h3>
+                    <p>Systeme de metiers avance avec progressions, salaires dynamiques et interactions realistiques.</p>
+                    <div class="script-tech">
+                        <span>Lua</span><span>MySQL</span><span>NUI</span>
+                    </div>
+                </div>
+                <div class="script-card">
+                    <div class="script-header">
+                        <span class="script-tag">Standalone</span>
+                        <span class="script-version">v2.1</span>
+                    </div>
+                    <h3><i class="fas fa-car"></i> Garage Avance</h3>
+                    <p>Systeme de garage multi-niveaux avec personnalisation vehicule et gestion de flotte.</p>
+                    <div class="script-tech">
+                        <span>Lua</span><span>JS</span><span>React</span>
+                    </div>
+                </div>
+                <div class="script-card">
+                    <div class="script-header">
+                        <span class="script-tag">ESX / QBCore</span>
+                        <span class="script-version">v4.0</span>
+                    </div>
+                    <h3><i class="fas fa-warehouse"></i> Inventaire Custom</h3>
+                    <p>Inventaire drag & drop avec crafting, poids realiste et systeme de stockage avance.</p>
+                    <div class="script-tech">
+                        <span>Lua</span><span>React</span><span>NUI</span>
+                    </div>
+                </div>
+                <div class="script-card">
+                    <div class="script-header">
+                        <span class="script-tag">Standalone</span>
+                        <span class="script-version">v1.8</span>
+                    </div>
+                    <h3><i class="fas fa-house-damage"></i> Systeme Housing</h3>
+                    <p>Logements personnalisables avec decoration, stockage et systeme de location.</p>
+                    <div class="script-tech">
+                        <span>Lua</span><span>MySQL</span><span>Vue</span>
+                    </div>
+                </div>
+                <div class="script-card">
+                    <div class="script-header">
+                        <span class="script-tag">ESX / QBCore</span>
+                        <span class="script-version">v2.5</span>
+                    </div>
+                    <h3><i class="fas fa-mobile-alt"></i> Telephone RP</h3>
+                    <p>Smartphone complet avec appels, SMS, reseaux sociaux et applications integrees.</p>
+                    <div class="script-tech">
+                        <span>Lua</span><span>React</span><span>NUI</span>
+                    </div>
+                </div>
+                <div class="script-card">
+                    <div class="script-header">
+                        <span class="script-tag">Standalone</span>
+                        <span class="script-version">v3.0</span>
+                    </div>
+                    <h3><i class="fas fa-shield-alt"></i> Anti-Cheat Pro</h3>
+                    <p>Protection avancee contre les cheats avec detection en temps reel et systeme de ban.</p>
+                    <div class="script-tech">
+                        <span>Lua</span><span>C#</span><span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section section-dark" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre Equipe</span>
+                <h2 class="section-title">Les <span class="accent">Developpeurs</span></h2>
+                <p class="section-desc">Des passionnes qui donnent vie a vos projets FiveM.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3>Fondateur</h3>
+                    <span class="team-role">Lead Developer</span>
+                    <p>Expert Lua & JavaScript avec 5+ ans d'experience FiveM.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3>Co-Fondateur</h3>
+                    <span class="team-role">Backend Developer</span>
+                    <p>Specialiste bases de donnees et architectures serveur.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Designer</h3>
+                    <span class="team-role">UI/UX Developer</span>
+                    <p>Createur d'interfaces NUI immersives et modernes.</p>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contactez-nous</span>
+                <h2 class="section-title">Un projet en <span class="accent">tete</span> ?</h2>
+                <p class="section-desc">Discutons de votre projet et trouvons la meilleure solution ensemble.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-discord"></i></div>
+                        <div>
+                            <h4>Discord</h4>
+                            <p>Rejoignez notre serveur Discord pour discuter en direct.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@mocrolabs.dev</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Disponibilite</h4>
+                            <p>Lundi - Dimanche, 10h - 23h</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre Discord" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Type de service</option>
+                            <option>Developpement de Script</option>
+                            <option>Configuration Serveur</option>
+                            <option>Design UI/UX</option>
+                            <option>Maintenance & Debug</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Decrivez votre projet..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Envoyer le Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">&#9670;</span>
+                        <span class="logo-text">MOCRO<span class="accent">LABS</span></span>
+                    </a>
+                    <p>Studio de developpement FiveM specialise dans la creation de scripts sur mesure et performants.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="#home">Accueil</a>
+                    <a href="#about">A propos</a>
+                    <a href="#services">Services</a>
+                    <a href="#scripts">Scripts</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#">Scripts Custom</a>
+                    <a href="#">Setup Serveur</a>
+                    <a href="#">Design NUI</a>
+                    <a href="#">Maintenance</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Frameworks</h4>
+                    <a href="#">ESX Legacy</a>
+                    <a href="#">QBCore</a>
+                    <a href="#">vRP</a>
+                    <a href="#">Standalone</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mocro Labs. Tous droits reserves.</p>
+                <p>Fait avec <span class="accent">&hearts;</span> pour la communaute FiveM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
